@@ -149,19 +149,45 @@ p, h1, h2, h3, h4, h5, h6 {
 /* Header */
 
 .header {
+    display: flex;
     width: 100%;
     background-color: var(--clr-secondary);
-    justify-content: center;
-    gap: 2em;
-    text-align: center;
     height: var(--header-height);
-    font-weight: 600;
-    font-size: var(--fs-base);
-    padding-block: 1.25rem;
-
-    position: fixed;
-    top: 0;
+    overflow: scroll;
+    justify-content: center;
 }
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    :root {
+        --header-height: 6rem;
+    }
+    .header {
+        flex-wrap: wrap; 
+        gap: 0.5em;
+    }
+    .header > .divider {
+        display: none;
+    }
+}
+
+
+/* Desktop */
+@media (min-width: 700px) {
+    .header {
+        gap: 1.5em;
+        text-align: center;
+        height: var(--header-height);
+        font-weight: 600;
+        font-size: var(--fs-base);
+        padding-block: 1.25rem;
+    
+        position: fixed;
+        top: 0;
+    }
+}
+
 
 .header--child {
     cursor: pointer;
