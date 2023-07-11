@@ -200,7 +200,6 @@ section {
     margin: 1rem;
     margin-bottom: 6rem;
     max-width: 1000px;
-
 }
 
 section > h2 {
@@ -217,9 +216,10 @@ section > h2 {
 section > p {
     font-size: var(--fs-base);
     line-height: 1;
-    text-align: start;
-    width: var(--p-width);
+    text-align: center;
+    margin-bottom: 1.5em;
 }
+
 
 .section--background {
     position: absolute;
@@ -248,6 +248,9 @@ h2, h3 {
     margin-block: 1rem;
 }
 
+hr {
+    margin: 3em;
+}
 
 ul {
     text-align: start;
